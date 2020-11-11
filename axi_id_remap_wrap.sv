@@ -26,6 +26,8 @@ module axi_id_remap_wrap #(
   AXI_BUS.Master    master
 );
 
+    assign master.aw_atop = '0;
+    
     axi_id_remap #(
         .AXI_ADDRESS_W(AXI_ADDRESS_W),
         .AXI_DATA_W   (AXI_DATA_W),
